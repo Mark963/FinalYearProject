@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#ford").click(function(){
+        $.get("/ford", function(data, status){
+		$("#car").html(data);
+        });
+    });
+});
+
+
+$(document).ready(function(){
+    $("#alfa").click(function(){
+        $.get("/alfa", function(data, status){
+		$("#car").html(data);
+        });
+    });
+});
+
+
+$(document).ready(function(){
+    $("#audi").click(function(){
+        $.get("/audi", function(data, status){
+		$("#car").html(data);
+        });
+    });
+});
+
+$(document).ready(function(){
+    $("#vw").click(function(){
+        $.get("/vw", function(data, status){
+		$("#car").html(data);
+        });
+    });
+});
+
+$(document).ready(function(){
+    $("#seat").click(function(){
+        $.get("/seat", function(data, status){
+		$("#car").html(data);
+        });
+    });
+});
+
+$(document).ready(function(){
+    $("#renault").click(function(){
+        $.get("/renault", function(data, status){
+		$("#car").html(data);
+        });
+    });
+});
+
+$(document).ready(function(){
+    $("#rover").click(function(){
+        $.get("/rover", function(data, status){
+		$("#car").html(data);
+        });
+    });
+});
+
+$(document).ready(function(){
+    $("#opel").click(function(){
+        $.get("/opel", function(data, status){
+		$("#car").html(data);
+        });
+    });
+});
+
+$(document).ready(function(){
+    $("#toyota").click(function(){
+        $.get("/toyota", function(data, status){
+		$("#car").html(data);
+        });
+    });
+});
+
+
+
+
+
+</script>
+   </head>
+   <body>
+   <!doctype html>
+<title>Car Make Viewer</title>
+<style>
+  * {
+    box-sizing: border-box; 
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    margin: 0;
+  }
+  .col-1 {
+    background: #D3D3D3;
+    flex: 1;
+  }
+  .col-2 {
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+  .content > article {
+    flex: 4;
+    min-height: 60vh;
+  }
+  header, footer {
+    background: #000000;
+    height: 20vh;
+  }
+  header, footer, article, nav {
+    padding: 1em;
+  }
+</style>
+<body>
+  <nav class="col-1">
+  	<img src='/images/mech.jpg'>
+  <br>
+			<br>
+				<br>
+					<br>
+						<br>
+  
+  <ul>
+          <li><input type="submit" id="ford" value="View Ford"></li>
+     </br>
+<li><input type="submit" id="audi" value="View Audi"></li>
+    </br>
+<li><input type="submit" id="vw" value="View VW"></li>
+   </br>
+<li><input type="submit" id="renault" value="View Renault"></li>
+ </br>
+<li><input type="submit" id="rover" value="View Rover"></li>
+ </br>
+<li><input type="submit" id="opel" value="View Opel"></li>
+ </br>
+<li><input type="submit" id="toyota" value="View Toyota"></li>
+ </br>
+<li><input type="submit" id="alfa" value="View alfa"></li>
+        </ul>
+		
+	
+		</nav>
+		
+  <div class="col-2">
+  	<header><h1 style="color:white;">Car Make Viewer</h1></header>
+    <main class="content">
+    <article><h2>Selected Car</h2> 
+<div id = "car">
+<h2>Car Name</h2>
+<p>Some text about a car</p>
+</div></article>
+<article>
+
+<h2>What is a Car?</h2>
+A car (or automobile) is a wheeled motor vehicle used for transportation. Most definitions of car say they run primarily on roads, seat one to eight people, have four tires, and mainly transport people rather than goods.[2][3] Cars came into global use during the 20th century, and developed economies depend on them. The year 1886 is regarded as the birth year of the modern car, when German inventor Karl Benz built his Benz Patent-Motorwagen. Cars did not become widely available until the early 20th century. One of the first cars that was accessible to the masses was the 1908 Model T, an American car manufactured by the Ford Motor Company. Cars were rapidly adopted in the US, where they replaced animal-drawn carriages and carts, but took much longer to be accepted in Western Europe and other parts of the world.
+<img src='images/what.jpg' height="500" width="700">
+</article>
+
+
+
+    </main>
+  	<footer>Mark Larkin G00322932</footer>
+  </div>
+</body>
+   </html>
