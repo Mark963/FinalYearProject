@@ -1,16 +1,15 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<title>Car Make Viewer</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+
 <script>
-$(document).ready(function(){
-    $("#hide").click(function(){
-        $("p").hide();
-    });
-    $("#show").click(function(){
-        $("p").show();
-    });
-});	
+// This is where the script "GETS" the html page. 
 			
 $(document).ready(function(){
     $("#ford").click(function(){
@@ -20,7 +19,7 @@ $(document).ready(function(){
     });
 });
 
-
+// This is where the script "GETS" the html page. 
 $(document).ready(function(){
     $("#alfa").click(function(){
         $.get("/alfa", function(data, status){
@@ -29,7 +28,7 @@ $(document).ready(function(){
     });
 });
 
-
+// This is where the script "GETS" the html page. 
 $(document).ready(function(){
     $("#audi").click(function(){
         $.get("/audi", function(data, status){
@@ -37,7 +36,7 @@ $(document).ready(function(){
         });
     });
 });
-
+// This is where the script "GETS" the html page. 
 $(document).ready(function(){
     $("#vw").click(function(){
         $.get("/vw", function(data, status){
@@ -45,7 +44,7 @@ $(document).ready(function(){
         });
     });
 });
-
+// This is where the script "GETS" the html page. 
 $(document).ready(function(){
     $("#seat").click(function(){
         $.get("/seat", function(data, status){
@@ -53,7 +52,7 @@ $(document).ready(function(){
         });
     });
 });
-
+// This is where the script "GETS" the html page. 
 $(document).ready(function(){
     $("#renault").click(function(){
         $.get("/renault", function(data, status){
@@ -61,7 +60,7 @@ $(document).ready(function(){
         });
     });
 });
-
+// This is where the script "GETS" the html page. 
 $(document).ready(function(){
     $("#rover").click(function(){
         $.get("/rover", function(data, status){
@@ -69,7 +68,7 @@ $(document).ready(function(){
         });
     });
 });
-
+// This is where the script "GETS" the html page. 
 $(document).ready(function(){
     $("#opel").click(function(){
         $.get("/opel", function(data, status){
@@ -77,7 +76,7 @@ $(document).ready(function(){
         });
     });
 });
-
+// This is where the script "GETS" the html page. 
 $(document).ready(function(){
     $("#toyota").click(function(){
         $.get("/toyota", function(data, status){
@@ -85,72 +84,158 @@ $(document).ready(function(){
         });
     });
 });
-
-
-
-
+//  This where the script "POSTS" the data below.
+$(document).ready(function(){
+    $("#mark").click(function(){
+    $.post("/focus",
+        {
+          make: "Ford",
+          model: "Focus"
+        },
+        function(data,status){
+            alert("Data: " + data + "\nStatus: " + status);
+        });
+  });
+});
 
 </script>
-	 <link rel="stylesheet" href="/style/style.css">
-   </head>
-   <body>
-   <!doctype html>
-<title>Car Make Viewer</title>
+	<body>
 
-<body>
-  <nav class="col-1">
-  	<img src='/images/mech.jpg'>
-  <br>
-			<br>
-				<br>
-					<br>
-						<br>
-  
-  <ul>
-          <li><input type="submit" id="ford" value="View Ford"></li>
-     </br>
-<li><input type="submit" id="audi" value="View Audi"></li>
-    </br>
-<li><input type="submit" id="vw" value="View VW"></li>
-   </br>
-<li><input type="submit" id="renault" value="View Renault"></li>
- </br>
-<li><input type="submit" id="rover" value="View Rover"></li>
- </br>
-<li><input type="submit" id="opel" value="View Opel"></li>
- </br>
-<li><input type="submit" id="toyota" value="View Toyota"></li>
- </br>
-<li><input type="submit" id="alfa" value="View alfa"></li>
-        </ul>
+		<!-- Header -->
+			<header id="header" class="alt">
+				<div class="logo"><a href="index.html">Car Make Viewer <span>by Mark Larkin G00322932</span></a></div>
+			</header>
+
+			
+		<!-- Banner -->
+			<section class="banner full">
+				
+				<article>
+				<div class="inner">
+						<header>
+							<p>See what sort of cars manafactures make! <a href="https://templated.co">Now!</a></p>
+							<h2>Car Make Viewer</h2>
+						</header>
+					</div>
+					<img src="images/ford.jpg" alt="" />
+					<div class="inner">
+				
+					</div>
+				</article>
+				<article>
+				<div class="inner">
+						<header>
+							<p>See what sort of cars manafactures make! <a href="https://templated.co">Now!</a></p>
+							<h2>Car Make Viewer</h2>
+						</header>
+					</div>
+					<img src="images/audi.jpg" alt="" />
+					<div class="inner">
+								
+					</div>
+				</article>
+				<article>
+				<div class="inner">
+						<header>
+							<p>See what sort of cars manafactures make! <a href="https://templated.co">Now!</a></p>
+							<h2>Car Make Viewer</h2>
+						</header>
+					</div>
+					<img src="images/alfa.jpg"  alt="" />
+					<div class="inner">
+						
 		
-	
+						</header>
+					</div>
+				</article>
+				<article>
+				<div class="inner">
+						<header>
+							<p>See what sort of cars manafactures make! <a href="https://templated.co">Now!</a></p>
+							<h2>Car Make Viewer</h2>
+						</header>
+					</div>
+					<img src="images/vw.jpg"  alt="" />
+					<div class="inner">
+						
+					</div>
+				</article>
+				<article>
+				<div class="inner">
+						<header>
+							<p>See what sort of cars manafactures make! <a href="https://templated.co">Now!</a></p>
+							<h2>Car Make Viewer</h2>
+						</header>
+					</div>
+					<img src="images/toyota.jpg"  alt="" />
+					<div class="inner">
+						
+					</div>
+				</article>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="wrapper style2">
+		
+<center>		
+          <input type="submit" id="ford" value="View Ford">
+     
+<input type="submit" id="audi" value="View Audi">
+    
+<input type="submit" id="vw" value="View VW">
+   
+<input type="submit" id="renault" value="View Renault">
+ 
+<input type="submit" id="rover" value="View Rover">
+ 
+<input type="submit" id="opel" value="View Opel">
+ 
+<input type="submit" id="toyota" value="View Toyota">
+ 
+<input type="submit" id="alfa" value="View alfa">
+
+<input type="submit" name="focus" id="mark" value="CLICK FOR THE BEST CAR!">
+     
 		</nav>
 		
-  <div class="col-2">
+
   	<header><h1 style="color:white;">Car Make Viewer</h1></header>
     <main class="content">
-    <article><h2>Selected Car</h2> 
+ <h2>Selected Car</h2> 
 <div id = "car">
 <h2>Car Name</h2>
 <p>Some text about a car</p>
-</div></article>
-<article>
-	
-<p>This website was created by Mark Larkin G00322392</p>
+</div>
+   </center>
+			</section>
 
-<button id="hide">Hide this message</button>
-<button id="show">Show this message</button>
-
-<h2>What is a Car?</h2>
-A car (or automobile) is a wheeled motor vehicle used for transportation. Most definitions of car say they run primarily on roads, seat one to eight people, have four tires, and mainly transport people rather than goods.[2][3] Cars came into global use during the 20th century, and developed economies depend on them. The year 1886 is regarded as the birth year of the modern car, when German inventor Karl Benz built his Benz Patent-Motorwagen. Cars did not become widely available until the early 20th century. One of the first cars that was accessible to the masses was the 1908 Model T, an American car manufactured by the Ford Motor Company. Cars were rapidly adopted in the US, where they replaced animal-drawn carriages and carts, but took much longer to be accepted in Western Europe and other parts of the world.
+		<!-- Two -->
+			<section id="two" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<h2>What is a Car?</h2>
+<p>A car (or automobile) is a wheeled motor vehicle used for transportation. Most definitions of car say they run primarily on roads, seat one to eight people, have four tires, and mainly transport people rather than goods.[2][3] Cars came into global use during the 20th century, and developed economies depend on them. The year 1886 is regarded as the birth year of the modern car, when German inventor Karl Benz built his Benz Patent-Motorwagen. Cars did not become widely available until the early 20th century. One of the first cars that was accessible to the masses was the 1908 Model T, an American car manufactured by the Ford Motor Company. Cars were rapidly adopted in the US, where they replaced animal-drawn carriages and carts, but took much longer to be accepted in Western Europe and other parts of the world.</p>
 <img src='images/what.jpg' height="500" width="700">
-</article>
+					</header>
+				</div>
+			</section>
 
 
 
-    </main>
-  	<footer>Mark Larkin G00322932</footer>
-  </div>
-</body>
-   </html>
+		<!-- Footer -->
+			<footer id="footer">
+				
+				<div class="copyright">
+					&copy; Mark Larkin
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
