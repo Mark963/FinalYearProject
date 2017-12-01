@@ -4,12 +4,18 @@ var path = require('path');
 var bodyParser = require("body-parser");
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.get('/', function(req, res) {
-	// console.log("file io");
-    // res.sendFile(path.join(__dirname + '/index.html'));
-// });
-
-
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+// This is where the post is displayed to the user when the button is clicked
+app.post('/focus', function (req, res) {
+	console.log("post is up and running!!");
+	console.log(req.body.make);
+   res.send('The best car is a ' + req.body.make + " " + req.body.model);
+})
+app.delete('/focus', function (req, res) {
+  res.redirect('/');
+})
+// This is where the the script GETS the html file to display.
 app.get('/alfa', function(req, res) {
 console.log("Hello");
 res.sendFile(path.join(__dirname + '/alfa.html'));
@@ -50,7 +56,7 @@ console.log("Hello");
 res.sendFile(path.join(__dirname + '/toyota.html'));
 });
 
-
+// This is where the page is put on the server at 8081
 
 app.listen(8080);
 
